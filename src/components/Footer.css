@@ -1,0 +1,12 @@
+.footer {
+
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: black;
+    font-weight: 800;
+}
