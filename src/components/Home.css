@@ -7,10 +7,13 @@
 .column {
     /* float: left; */
     /* display: flex; */
-    width: 45%;
+    width: 30%;
     /* margin-bottom: 16px; */
     margin: auto;
     padding: 0 8px;
+  }
+  .column:hover {
+    transform: scale(1.1)
   }
   
   /* Display the columns below each other instead of side by side on small screens */
@@ -58,7 +61,6 @@
     cursor: pointer;
     width: 100%;
   }
-  
-  .button:hover {
+  .button:hover{
     background-color: #555;
   }

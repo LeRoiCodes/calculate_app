@@ -3,9 +3,12 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <div class="footer">
-      <p>LeRoi Codes</p>
-    </div>
+    <footer>
+      <div class="footer">
+        <p>LeRoi Codes</p>
+      </div>
+    </footer>
+    
   )
 }
 
