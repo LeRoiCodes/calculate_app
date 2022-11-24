@@ -85,3 +85,6 @@ h4 {
   .red{
     background-color:#B33A3A;
   }
+  .header .logo {
+    color:  black !important;
+  }
