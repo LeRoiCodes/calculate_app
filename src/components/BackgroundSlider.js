@@ -37,7 +37,7 @@ function BackgroundSlider() {
 
   return (
     <div className="container">
-        <div className="" style={bgImage}>
+        <div className="bg" style={bgImage}>
         <Header />
         <Footer />
         <Home />
