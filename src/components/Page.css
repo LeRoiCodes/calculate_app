@@ -1,3 +1,15 @@
+
+.page{
+  height: auto;
+  position: relative;
+} 
+
+@media only screen and (max-width: 700px) {
+  .page{
+      height: auto;
+  }
+}
+
 h4 {
     display: block;
     margin-block-start: 1.33em;
@@ -85,6 +97,14 @@ h4 {
   .red{
     background-color:#B33A3A;
   }
-  .header .logo {
+  .header .logo, .footer {
     color:  black !important;
+  }
+  .footer{
+    position:absolute;
+    bottom: 0;
+    
+  }
+  .sim{
+    margin-bottom: 100px;
   }

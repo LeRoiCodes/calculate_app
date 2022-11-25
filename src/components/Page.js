@@ -6,7 +6,7 @@ import './Page.css'
 
 function Page() {
   return (
-    <div>
+    <div className='page'>
         <Header />
         <Calculator />
         <Footer />

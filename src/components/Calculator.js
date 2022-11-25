@@ -58,7 +58,7 @@ function Calculator() {
               <Semester key={item} skey={item} 
               setStateSemesterObject = {setStateSemesterObject}
               />))}
-            <button className="btn" onClick={addSemester}>Add Semester</button>
+            <button className="btn sim" onClick={addSemester}>Add Semester</button>
               
         </div>
         { isNaN(cgpa) ? null :
