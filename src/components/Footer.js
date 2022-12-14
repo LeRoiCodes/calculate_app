@@ -1,14 +1,12 @@
-import React from 'react';
-import './Footer.css';
+import React from 'react'
 
 function Footer() {
   return (
     <footer>
-      <div className="footer">
+      <div className='footer'>
         <p>LeRoi Codes</p>
       </div>
     </footer>
-    
   )
 }
 
