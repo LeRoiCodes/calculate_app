@@ -148,6 +148,10 @@ img {
   color: rgb(255, 255, 255);
 }
 
+.page footer {
+  margin-bottom: 20px;
+}
+
 button {
   background-color: dodgerblue;
   border: none;
@@ -163,10 +167,11 @@ button {
 
 .gpa-calc {
   padding: 0 20px;
-  height: fit-content;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .gpa-title {
