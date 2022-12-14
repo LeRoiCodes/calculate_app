@@ -50,9 +50,9 @@ function Calculator() {
   }
 
   return (
-    <div>
-        <h3>GPA Calculator</h3>
-        <p>Want to calculate your college course grades? Our easy to use college GPA calculator will help you calculate your GPA and stay on top of your study grades in just minutes! Whether you are taking degree courses online or are on a community college campus, no matter what study grant or scholarship you are aiming for – we’ve got you covered.</p>
+    <div className='gpa-calc'>
+        <h3 className='gpa-title'>GPA Calculator</h3>
+        <p className='gpa-text'>Want to calculate your college course grades? Our easy to use college GPA calculator will help you calculate your GPA and stay on top of your study grades in just minutes! Whether you are taking degree courses online or are on a community college campus, no matter what study grant or scholarship you are aiming for – we’ve got you covered.</p>
         <div className="semester">
             {semestersComponent.map((item, i) => (
               <Semester key={item} skey={item} 

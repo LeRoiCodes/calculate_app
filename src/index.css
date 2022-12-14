@@ -1,15 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+}
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Slider Container */
+.slider-container{
+    height:100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    transition: all 3s ease-in-out;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nextSlide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.lastSlide {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Header here */
+.header {
+    overflow: hidden;
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-logo {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+  }
+
+  .header-right a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .header-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgb(16, 4, 49);
+    transition: all 1s ease-in-out;
+  }
+
+  .header-right.header-hidden {
+    /* opacity: 0; */
+    transform: translateX(100%);
+  }
+
+  .header-right.header-show {
+    /* opacity: 1; */
+    transform: translateX(0);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5%;
+    left: 85%;
+  }
+
+  /* Footer */
+
+  footer {
+    margin: 0;
+    margin-top: 18px;
+    padding: 0;
+    width: 100%;
+}
+.footer {
+    background-color:rgba(241, 241, 241, 0);
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.footer p {
+    color: white;
+}
+
+
+/* Page */
+
+.page{
+  height: fit-content;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(196, 196, 241) 10%, rgb(5, 0, 49) 100%);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  background-color: dodgerblue;
+  border: none;
+  color: #fcfcfc;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+
+.gpa-calc {
+  padding: 0 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gpa-title {
+  border-bottom: 6px double #ffffff94;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: fit-content;
+}
+
+.gpa-text {
+  text-align: left;
+}
+
+.semester {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.semester-form {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.semester-form h4 {
+  margin-bottom: 12px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+input, select {
+  padding: 5px;
+  width: 100%;
+}
+
+.btn.sim {
+  width: fit-content;
+  text-align: center;
+}
+
+.green{
+  background-color: #04AA6D;
+}
+
+.red{
+  background-color:#B33A3A;
+}
+
+@media screen and (min-width: 500px) {
+  .header {
+    padding: 20px 40px;
+  }
+  .gpa-calc {
+    padding: 0 50px;
+  }
+  .semester-form {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gpa-calc {
+    padding: 0 100px;
+  }
+  .semester {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .semester-form {
+    width: 45%;
+  }
+
+  .header-right {
+    position: sticky;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+
+  .header-right.header-hidden {
+    transform: translateX(0);
+  }
+
+  .menu, .close-btn {
+    display: none;
+  }
 }
